@@ -1,3 +1,6 @@
+# set PowerShell to UTF-8
+[console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
 #Prompt
 Import-Module posh-git
 Import-Module oh-my-posh
@@ -16,6 +19,13 @@ Set-PSReadLineOption -BellStyle None
 Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
+
+# Fzf
+Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+
+# Env
+$env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
 
 # Alias
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
