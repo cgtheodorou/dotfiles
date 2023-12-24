@@ -8,14 +8,27 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "shell",
+          "type": "os",
           "style": "diamond",
           "leading_diamond": "╭─",
           "trailing_diamond": "",
           "foreground": "#ffffff",
           "background": "#0077c2",
           "properties": {
-          }
+            "macos": "\uf179 ",
+            "ubuntu": "\uf31b ",
+            "windows": "\ue62a "
+          },
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}"
+        },
+        {
+          "background": "#0077c2",
+          "foreground": "#ffffff",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "style": "diamond",
+          "template": " {{ .UserName }}@{{ .HostName }} ",
+          "type": "session"
         },
         {
           "type": "root",
