@@ -28,6 +28,7 @@ $env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
 
 # Alias
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
+Set-Alias cat 'C:\Program Files\Git\usr\bin\cat.exe'
 
 # Utilities
 function which ($command) {
