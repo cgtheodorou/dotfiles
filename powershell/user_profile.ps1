@@ -3,7 +3,6 @@
 
 #Prompt
 Import-Module posh-git
-Import-Module oh-my-posh
 
 #Load prompt config
 function Get-ScriptDirectory { Split-Path $MyInvocation.ScriptName }
